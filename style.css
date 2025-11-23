@@ -1,17 +1,31 @@
 body {
     margin: 0;
     padding: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 20px 10px;
     text-align: center;
 }
 header h1 a {
     color: inherit;
     text-decoration: none;
+}
+main {
+    flex: 1; /* fills remaining space between header and footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical centering */
+    align-items: center;     /* horizontal centering */
+    text-align: center;
+    padding: 20px;
 }
 .center-section {
     text-align: center;
@@ -20,31 +34,41 @@ header h1 a {
 .center-section img {
     max-width: 90%;
     height: auto;
+    border-radius: 8px; /* optional styling */
+    margin-bottom: 20px;
 }
 .center-text {
     text-align:center;
     margin-top: -20px;
     padding: 0 20px;
 }
+.center-text h1 {
+    font-size: 2rem;
+    margin: 0;
+}
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
     width: 100%;
+    position: fixed;
     bottom: 0;
 }
 @media screen and (max-width: 600px) {
     header h1 {
-        font-size: 1.8rem;
-    }
-
-    .center-text h1 {
         font-size: 1.5rem;
     }
 
-    .center-section {
-        padding: 30px 10px;
+    .center-text h1 {
+        font-size: 1.3rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .center-section img {
+        margin-bottom: 15px;
     }
 }
