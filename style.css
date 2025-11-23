@@ -1,7 +1,5 @@
 body {
     margin: 0;
-    padding: 0;
-    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
@@ -11,7 +9,7 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 20px 10px;
+    padding: 15px 10px;
     text-align: center;
 }
 header h1 a {
@@ -19,19 +17,19 @@ header h1 a {
     text-decoration: none;
 }
 main {
-    flex: 1; /* fills remaining space between header and footer */
+    flex: 1 0 auto; /* fills remaining space between header and footer */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertical centering */
     align-items: center;     /* horizontal centering */
     text-align: center;
-    padding: 20px;
 }
 .center-section {
-    text-align: center;
+    display: flex;
+    justify-content: center; /* horizontally center children */
     padding: 60px 20px;
 }
 .center-section img {
+    text-align: center;
     max-width: 90%;
     height: auto;
     border-radius: 8px; /* optional styling */
@@ -39,8 +37,8 @@ main {
 }
 .center-text {
     text-align:center;
-    margin-top: -20px;
-    padding: 0 20px;
+    margin-top: 0px;
+    padding: 0 10px;
 }
 .center-text h1 {
     font-size: 2rem;
@@ -52,8 +50,7 @@ footer {
     text-align: center;
     padding: 10px;
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    flex-shrink: 0;
 }
 @media screen and (max-width: 600px) {
     header h1 {
