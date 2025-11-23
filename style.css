@@ -15,11 +15,16 @@ header h1 a {
 }
 .center-section {
     text-align: center;
-    padding: 100px;
+    padding: 60px 20px;
+}
+.center-section img {
+    max-width: 90%;
+    height: auto;
 }
 .center-text {
     text-align:center;
-    margin-top: -80px;
+    margin-top: -20px;
+    padding: 0 20px;
 }
 footer {
     background-color: #333;
@@ -29,4 +34,17 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .center-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .center-section {
+        padding: 30px 10px;
+    }
 }
