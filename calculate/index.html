@@ -1,0 +1,23 @@
+<script>
+async function calculate() {
+    const bill = document.getElementById("bill").value;
+    const tip = document.getElementById("tip").value;
+    const people = document.getElementById("people").value;
+
+    const response = await fetch(
+        "https://apps.msrodgers.co.uk/calculate",
+        {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ bill, tip, people })
+        }
+    );
+
+    const data = await response.json();
+
+    document.getElementById("result").innerText =
+        data.error
+            ? data.error
+            : `Total: £${data.total} | Per person: £${data.per_person}`;
+}
+</script>
